@@ -4,7 +4,7 @@ import PySimpleGUI as sg
 
 
 layout = [[sg.Text("Press a key or scroll mouse")],
-          [sg.Text("", size=(18, 1), key='text', enable_events=True, relief=sg.RELIEF_RIDGE)],
+          [sg.Text("a", size=(18, 1), key='text', enable_events=True, relief=sg.RELIEF_RIDGE)],
           [sg.Text("")],
           [sg.Button("OK", key='OK')]]
 
