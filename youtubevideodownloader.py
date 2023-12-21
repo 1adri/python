@@ -18,7 +18,7 @@ layout = [
     [sg.Text("")],
     [sg.Text('Video Link', size=(8, 1)), sg.InputText(enable_events=True)],
     [sg.Text(" ", size=(50, 5), key='progress')],
-    [sg.Button("Download", key="Enter"), sg.Button("Cancel", key='Cancel')]
+    [sg.Button("Download", key="Enter"), sg.Button("Close", key='Close')]
 ]
 def parse_string(input_string):
     return input_string[7:12]
@@ -37,7 +37,7 @@ def my_hook(d):
 while True:
     event, values = window.read()
     text_elem = window['progress']
-    if event == sg.WIN_CLOSED or event == 'Cancel':  # if the user closes the window or clicks cancel
+    if event == sg.WIN_CLOSED or event == 'Close':  # if the user closes the window or clicks cancel
         break
     if event == "Enter":
         
